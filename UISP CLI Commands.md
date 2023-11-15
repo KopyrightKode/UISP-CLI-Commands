@@ -52,8 +52,7 @@ mca-status | head -n 1 | awk -F, '{print $3}'
   
 #echo "Test script data"  
   
-#ssh -i /notpasswords/ubi-ssh-key -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa admin@10.0.0.29 'm  
-ca-status | grep link'  
+#ssh -i /notpasswords/ubi-ssh-key -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa admin@10.0.0.29 'mca-status | grep link'  
   
 ssh -i /notpasswords/ubi-rsa -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa admin@10.0.0.29 'mca-st  
 atus | grep link'
