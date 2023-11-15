@@ -5,7 +5,6 @@ ethtool -S eth0
 Unplugged cable will show all 0's in the output, if plugged in this will show SNR
 #### ✓ Cable plugged in:
 ```bash
-WA# ethtool -S eth0
 NIC statistics:
      SNR for pair 0, dB         : 30
      SNR for pair 1, dB         : 30
