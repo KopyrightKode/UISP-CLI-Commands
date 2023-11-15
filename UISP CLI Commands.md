@@ -36,7 +36,7 @@ mca-status | head -n 1 | awk -F, '{print $3}'
 ```
 
 # Check cable SNR
-Unplugged cable will show all 0's in the output, if plugged in this will show SNR
+Unplugged cable will show all 0's in the output. If it is plugged in, it will show SNR
 ### Examples: 
 #### ✓ Cable plugged in:
 ```bash
@@ -48,7 +48,7 @@ NIC statistics:
      SNR for pair 3, dB         : 30
      Cable length,m (+/- 20m)   : 18
 ```
-#### 𐄂 No cable plugged in:
+#### 𐄂 Cable NOT plugged in
 ```bash
 NIC statistics:
      SNR for pair 0, dB         : 0
@@ -66,8 +66,7 @@ NIC statistics:
   
 #echo "Test script data"  
   
-#ssh -i /notpasswords/ubi-ssh-key -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa admin@10.0.0.29 'm  
-ca-status | grep link'  
+#ssh -i /notpasswords/ubi-ssh-key -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa admin@10.0.0.29 'mca-status | grep link'  
   
 ssh -i /notpasswords/ubi-rsa -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa admin@10.0.0.29 'mca-st  
 atus | grep link'
