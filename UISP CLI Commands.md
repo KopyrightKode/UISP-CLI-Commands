@@ -1,9 +1,28 @@
-
 # Check if eth cable is plugged in
 ```bash
 ethtool -S eth0
 ```
-Unplugged cable will show all 0's in the output, if plugged in this will show snr
+Unplugged cable will show all 0's in the output, if plugged in this will show SNR
+#### ✓ Cable plugged in:
+```bash
+WA# ethtool -S eth0
+NIC statistics:
+     SNR for pair 0, dB         : 30
+     SNR for pair 1, dB         : 30
+     SNR for pair 2, dB         : 30
+     SNR for pair 3, dB         : 30
+     Cable length,m (+/- 20m)   : 18
+```
+#### 𐄂 No cable plugged in:
+```bash
+NIC statistics:
+     SNR for pair 0, dB         : 0
+     SNR for pair 1, dB         : 0
+     SNR for pair 2, dB         : 0
+     SNR for pair 3, dB         : 0
+     Cable length,m (+/- 20m)   : 0
+```
+
 
 # Check for cable errors
 
