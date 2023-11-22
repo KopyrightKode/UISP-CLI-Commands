@@ -31,15 +31,18 @@ mca-status | grep signal
 ```
 
 # Check firmware
-```
+```bash
 mca-status | head -n 1 | awk -F, '{print $3}'
 ```
 
 # Check cable SNR
+```bash
+ethtool -S eth0
+```
 Unplugged cable will show all 0's in the output. If it is plugged in, it will show SNR
 ### Examples: 
 #### ✓ Cable plugged in:
-```bash
+```
 WA# ethtool -S eth0
 NIC statistics:
      SNR for pair 0, dB         : 30
@@ -49,7 +52,7 @@ NIC statistics:
      Cable length,m (+/- 20m)   : 18
 ```
 #### 𐄂 Cable NOT plugged in
-```bash
+```
 NIC statistics:
      SNR for pair 0, dB         : 0
      SNR for pair 1, dB         : 0
